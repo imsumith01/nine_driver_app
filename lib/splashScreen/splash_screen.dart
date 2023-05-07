@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:driver_app/authentication/car_info_screen.dart';
 import 'package:driver_app/authentication/signup_screen.dart';
 import 'package:driver_app/mainScreens/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
     Timer(const Duration(seconds: 3), () async {
       //send user to home screen
       Navigator.push(
-          context, MaterialPageRoute(builder: (c) => SignUpScreen()));
+          context, MaterialPageRoute(builder: (c) => CarInfoScreen()));
     });
   }
 
@@ -36,7 +37,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/logo-no-background.png"),
+              Image.asset("images/logo-white.png"),
               const SizedBox(
                 height: 10,
               ),
