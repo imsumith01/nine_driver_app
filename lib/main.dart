@@ -1,18 +1,18 @@
+import 'package:driver_app/splashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MyApp(
-      child: MaterialApp(
-        title: 'Nine Drivers App',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: Scaffold(appBar: AppBar(title: const Text("Welcome to Nine Driver App")),),
-        debugShowCheckedModeBanner: false,
-      )
-    ),
+        child: MaterialApp(
+      title: 'Nine Drivers App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MySplashScreen(),
+      debugShowCheckedModeBanner: false,
+    )),
   );
 }
 
@@ -21,8 +21,7 @@ class MyApp extends StatefulWidget {
 
   MyApp({this.child});
 
-  static void restartApp(BuildContext context)
-  {
+  static void restartApp(BuildContext context) {
     context.findAncestorStateOfType<_MyAppState>()!.restartApp();
   }
 
@@ -32,7 +31,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Key key = UniqueKey();
-  void restartApp(){
+
+  void restartApp() {
     setState(() {
       key = UniqueKey();
     });
@@ -40,9 +40,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return KeyedSubtree(
-      key: key,
-        child: widget.child!
-    );
+    return KeyedSubtree(key: key, child: widget.child!);
   }
 }
