@@ -1,6 +1,7 @@
+import 'package:driver_app/global/global.dart';
+import 'package:driver_app/splashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../splashScreen/splash_screen.dart';
 
 class ProfileTabPage extends StatefulWidget {
   const ProfileTabPage({Key? key}) : super(key: key);
@@ -8,6 +9,8 @@ class ProfileTabPage extends StatefulWidget {
   @override
   _ProfileTabPageState createState() => _ProfileTabPageState();
 }
+
+
 
 class _ProfileTabPageState extends State<ProfileTabPage> {
   @override
@@ -17,9 +20,10 @@ class _ProfileTabPageState extends State<ProfileTabPage> {
         child: const Text(
           "Sign Out",
         ),
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (c) => const MySplashScreen()));
+        onPressed: ()
+        {
+          fAuth.signOut();
+          Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
         },
       ),
     );
