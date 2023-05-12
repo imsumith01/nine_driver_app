@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "600615314667",
+    "firebase_url": "https://nine-driver-app-default-rtdb.firebaseio.com",
+    "project_id": "nine-driver-app",
+    "storage_bucket": "nine-driver-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600615314667:android:36099c0dce9c7904694aae",
+        "android_client_info": {
+          "package_name": "com.imtiaz.driverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600615314667-ikptrc75ao3ic18cu5p52rhk0q09n52t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU61AdwFiXlPM5p7lVOwzwpiFa60xbTMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600615314667-ikptrc75ao3ic18cu5p52rhk0q09n52t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
