@@ -1,4 +1,8 @@
+import 'package:driver_app/global/global.dart';
+import 'package:driver_app/splashScreen/splash_screen.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class CarInfoScreen extends StatefulWidget {
   @override
@@ -21,6 +25,17 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       "car_model": carModelTextEditingController.text.trim(),
       "type": selectedCarType,
     };
+
+    DatabaseReference driversRef =
+        FirebaseDatabase.instance.ref().child("drivers");
+    driversRef
+        .child(currentFirebaseUser!.uid)
+        .child("car_details")
+        .set(driverCarInfoMap);
+
+    Fluttertoast.showToast(msg: "Car Details has been saved, Congratulations.");
+    Navigator.push(
+        context, MaterialPageRoute(builder: (c) => const MySplashScreen()));
   }
 
   @override
