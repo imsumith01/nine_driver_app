@@ -1,33 +1,18 @@
 import 'package:flutter/material.dart';
 
-
-class LoginScreen extends StatefulWidget
-{
-
+class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-
-
-
-class _LoginScreenState extends State<LoginScreen>
-{
+class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
 
-
-  validateForm()
-  {
-    if(!emailTextEditingController.text.contains("@"))
-    {
-    }
-    else if(passwordTextEditingController.text.isEmpty)
-    {
-    }
-    else
-    {
-    }
+  validateForm() {
+    if (!emailTextEditingController.text.contains("@")) {
+    } else if (passwordTextEditingController.text.isEmpty) {
+    } else {}
   }
 
   @override
@@ -39,16 +24,16 @@ class _LoginScreenState extends State<LoginScreen>
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-
-              const SizedBox(height: 30,),
-
+              const SizedBox(
+                height: 30,
+              ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Image.asset("images/logo-white.png"),
               ),
-
-              const SizedBox(height: 10,),
-
+              const SizedBox(
+                height: 10,
+              ),
               const Text(
                 "Login as a Driver",
                 style: TextStyle(
@@ -57,13 +42,10 @@ class _LoginScreenState extends State<LoginScreen>
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               TextField(
                 controller: emailTextEditingController,
                 keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(
-                    color: Colors.grey
-                ),
+                style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "Email",
                   hintText: "Email",
@@ -83,14 +65,11 @@ class _LoginScreenState extends State<LoginScreen>
                   ),
                 ),
               ),
-
               TextField(
                 controller: passwordTextEditingController,
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                style: const TextStyle(
-                    color: Colors.grey
-                ),
+                style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "Password",
                   hintText: "Password",
@@ -110,12 +89,11 @@ class _LoginScreenState extends State<LoginScreen>
                   ),
                 ),
               ),
-
-              const SizedBox(height: 20,),
-
+              const SizedBox(
+                height: 20,
+              ),
               ElevatedButton(
-                onPressed: ()
-                {
+                onPressed: () {
                   validateForm();
                 },
                 style: ElevatedButton.styleFrom(
@@ -129,18 +107,13 @@ class _LoginScreenState extends State<LoginScreen>
                   ),
                 ),
               ),
-
               TextButton(
                 child: const Text(
                   "Do not have an Account? SignUp Here",
                   style: TextStyle(color: Colors.grey),
                 ),
-                onPressed: ()
-                {
-
-                },
+                onPressed: () {},
               ),
-
             ],
           ),
         ),
