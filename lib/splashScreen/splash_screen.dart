@@ -1,9 +1,8 @@
 import 'dart:async';
 
-import 'package:driver_app/authentication/car_info_screen.dart';
-import 'package:driver_app/authentication/signup_screen.dart';
-import 'package:driver_app/mainScreens/main_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../authentication/login_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
   const MySplashScreen({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
     Timer(const Duration(seconds: 3), () async {
       //send user to home screen
       Navigator.push(
-          context, MaterialPageRoute(builder: (c) => CarInfoScreen()));
+          context, MaterialPageRoute(builder: (c) => LoginScreen()));
     });
   }
 
