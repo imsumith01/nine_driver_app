@@ -30,7 +30,7 @@ class MyApp extends StatefulWidget {
   }
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -44,6 +44,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return KeyedSubtree(key: key, child: widget.child!);
+    return KeyedSubtree(
+      key: key,
+      child: widget.child!,
+    );
   }
 }
