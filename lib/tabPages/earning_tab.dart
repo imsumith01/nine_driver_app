@@ -10,7 +10,7 @@ class EarningsTabPage extends StatefulWidget {
 class _EarningsTabPageState extends State<EarningsTabPage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Text("Earnings"),
     );
   }

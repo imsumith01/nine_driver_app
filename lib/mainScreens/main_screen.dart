@@ -1,15 +1,12 @@
+import 'package:driver_app/tabPages/earning_tab.dart';
+import 'package:driver_app/tabPages/home_tab.dart';
+import 'package:driver_app/tabPages/profile_tab.dart';
+import 'package:driver_app/tabPages/ratings_tab.dart';
 import 'package:flutter/material.dart';
 
-import '../tabPages/earning_tab.dart';
-import '../tabPages/home_tab.dart';
-import '../tabPages/profile_tab.dart';
-import '../tabPages/ratings_tab.dart';
-
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
-
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen>

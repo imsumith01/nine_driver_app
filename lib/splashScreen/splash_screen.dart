@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:driver_app/authentication/login_screen.dart';
+import 'package:driver_app/authentication/signup_screen.dart';
 import 'package:driver_app/global/global.dart';
 import 'package:driver_app/mainScreens/main_screen.dart';
 import 'package:flutter/material.dart';
