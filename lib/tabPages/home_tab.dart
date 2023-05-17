@@ -33,10 +33,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
   var geoLocator = Geolocator();
   LocationPermission? _locationPermission;
 
-  String statusText = "Now Offline";
-  Color buttonColor = Colors.grey;
-  bool isDriverActive = false;
-
   checkIfLocationPermissionAllowed() async {
     _locationPermission = await Geolocator.requestPermission();
 
@@ -63,6 +59,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
         await AssistantMethods.searchAddressForGeographicCoOrdinates(
             driverCurrentPosition!, context);
     print("this is your address = " + humanReadableAddress);
+
+    AssistantMethods.readDriverRatings(context);
   }
 
   readCurrentDriverInformation() async {
@@ -98,6 +96,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
     PushNotificationSystem pushNotificationSystem = PushNotificationSystem();
     pushNotificationSystem.initializeCloudMessaging(context);
     pushNotificationSystem.generateAndGetToken();
+
+    AssistantMethods.readDriverEarnings(context);
   }
 
   @override
